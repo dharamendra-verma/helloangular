@@ -1,0 +1,52 @@
+﻿<div style="padding-left:20px; padding-right:20px">
+    <img ng-src="{{person.imageURL}}" />
+
+    <div ng-bind-html="snippete">some html here</div>
+
+    <div class="row">
+        <div class="span3">
+            <div><strong>Name : </strong>{{person.Name}}</div>
+            <div ng-style="myStyle"><strong>City : </strong>{{person.City}}</div>
+            <div>
+                <strong>Description : </strong>
+                <h5 ng-bind-template="{{person.Name}}-{{person.City}}"></h5>
+            </div>
+        </div>
+
+        <div class="span4">
+            <address>
+                <strong>Address1:</strong><br />
+                {{person.Loaction.Address}} <br />
+                {{person.Loaction.City}} <br />
+                {{person.Loaction.Country}}
+            </address>
+        </div>
+        <div><strong>Company: </strong>{{person.Company}}</div>
+        <br />
+
+        <!--@*<div> {{employee.Name}}</div>*@-->
+    </div>
+
+    <div ng-repeat="employee in employees"> {{employee.Name}}</div>
+    <ul class="img-thumbnail">
+        <li ng-repeat="employee in employees">
+
+            <div class="row">
+                <div class="votingButton" ng-click="updateCity(employee)">
+                    <i class="glyphicon-ban-circle"></i>
+                </div>
+
+                <div class="well span9">
+                    <h4 class="well-title">{{employee.Name}}</h4>
+                    <h6 style="margin-top:10px">{{employee.Name}}</h6>
+                    <h6 style="margin-top:10px">{{employee.Department.Name}}</h6>
+                    <h6 style="margin-top:10px">{{employee.City}}</h6>
+                    <div>
+                        <input type="button" ng-click="updateCity(employee)" value="Update" />
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

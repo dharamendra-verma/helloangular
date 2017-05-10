@@ -1,0 +1,4 @@
+/WebApplication3/bin/*
+/WebApplication3/obj/*
+/WebApplication3/bower_components/*
+/WebApplication3/node_modules/*

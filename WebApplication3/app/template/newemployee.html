@@ -1,0 +1,11 @@
+﻿<div style="padding-left:20px; padding-right:20px">
+    <header>{{title}}</header>
+    <section>
+        <form ng-submit="AddEmployee()">
+            Name: <input name="name" type="text" ng-model="newEmployee.Name" />
+            City: <input name="city" type="text" ng-model="newEmployee.City" />
+            <input type="submit" value="Add" />
+        </form>
+    </section>
+</div>
+

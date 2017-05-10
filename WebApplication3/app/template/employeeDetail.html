@@ -1,0 +1,20 @@
+﻿
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inverse"></div>
+    </div>
+    <form>
+        <label for="employeename">Employee Name:</label>
+        <input id="employeename" type="text" required ng-model="employee.Name" placeholder="enter employee name" />
+
+        <label for="cityname">City:</label>
+        <input id="cityname" type="text" ng-model="employee.City" placeholder="enter city name" />
+
+        <label for="departmentname">Department Name:</label>
+        <input id="departmentname" type="text" placeholder="enter employee name" />
+
+        <!--<input type="submit" ng-click="saveemployee(employee)" class="btn btn-primary" value="submit" />-->
+        <input type="submit" class="btn-default" value="cancel" />
+        <div>{{employee.City}}</div>
+    </form>
+</div>
